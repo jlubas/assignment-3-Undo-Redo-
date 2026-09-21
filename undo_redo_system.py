@@ -63,7 +63,7 @@ def run_undo_redo():
 
             if action is not None:
                redo_stack.push(action)
-               print(f"Undone: {action}")
+               print(f"Undid action: {action}")
             else:
                print("No actions to undo")
             
@@ -73,7 +73,7 @@ def run_undo_redo():
             action = redo_stack.pop()
             if action is not None:
                undo_stack.push(action)
-               print(f"Redone: {action}")
+               print(f"Redid action: {action}")
             else:
                print("No actions to redo")
 

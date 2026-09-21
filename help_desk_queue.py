@@ -70,7 +70,7 @@ def run_help_desk():
             # Help the next customer in the queue and return message that they were helped
             customer = queue.dequeue()
             if customer is not None:
-               print(f"{customer} has been helped.")
+               print(f"Helped: {customer}")
             else:
                print("No customers waiting.")
 

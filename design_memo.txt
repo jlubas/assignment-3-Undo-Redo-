@@ -1,6 +1,6 @@
 Design Memo
 
-For the undo/redo system, I used a stack because a stack follows Last-In, First-Out (LIFO) order. This fits undo because the most recent action should be the first action reversed. In my implementation, push() places a new action at the top of the undo stack, and pop() removes the most recent action. When an action is undone, it is moved to the redo stack. This allows the program to restore the most recently undone action when the user chooses redo.
+For the undo/redo system, I used a stack because a stack follows Last-In, First-Out (LIFO) order. This fits undo because the most recent action should be the first action reversed. In my implementation, push() places a new action at the top of the undo stack, and pop() removes the most recent action. When an action is undone, it is moved to the redo stack. This allows the program to reapply the most recently undone action when the user chooses redo.
 
 For the help desk system, a queue is better because it follows First-In, First-Out (FIFO) order. Customers should normally be helped in the same order they arrive. My queue keeps references to both the front and rear. enqueue() adds a new customer at the rear, while dequeue() removes the customer at the front. This preserves the arrival order and prevents newer customers from being served before customers who have already been waiting.
 
